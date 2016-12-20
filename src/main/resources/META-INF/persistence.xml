@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="idg" transaction-type="RESOURCE_LOCAL">
+    	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+    	<class>
+    		com.idg.bfzb.server.usercenter.model.dto.UcAdminEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.usercenter.model.dto.UcAuthCodeEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.usercenter.model.dto.UcLoginTokenEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.usercenter.model.dto.UcPermissionEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.usercenter.model.dto.UcRegionEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.usercenter.model.dto.UcUserInfoEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.authentication.model.dto.UserPersonalEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.file.model.dto.AttachmentEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.authentication.model.dto.UserEnterpriseEntity
+    	</class>
+    	<class>com.idg.bfzb.server.team.model.dto.UserTeamEntity</class>
+    	<class>
+    		com.idg.bfzb.server.ability.model.dto.TAbilityEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.ability.model.dto.TUserAbilityAssoc
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.ability.model.dto.TUserAbilityAssocId
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.pay.model.dto.FinanceTradeDetailEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.pay.model.dto.FinanceWithdrawApplyEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.team.model.dto.TeamMemberEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.team.model.dto.TeamMemberEntityId
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.team.model.dto.TeamApplyEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.team.model.dto.TeamApplyEntityId
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.CategoryEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.common.model.dto.SysCodeEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.ProjectCategoryEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.ProjectCategoryEntityId
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.homepage.model.dto.ContAdvertisementEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.adminuser.model.dto.UcAdminMenusEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.ProjectTenderEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.EvaluateRecordEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.ProjectRevealEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.ProjectProgressEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.ProjectRejectionEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.ProjectWarrantyEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.ProjectAbilityEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.ProjectAbilityEntityId
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.CategoryAbilityEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.CategoryAbilityEntityId
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.message.model.dto.ContMessageEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.message.model.dto.ContMsgDetailEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.message.model.dto.ContMsgDetailEntityId
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.project.model.dto.ProjectPlanEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.content.model.dto.TContAdvertisementEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.pay.model.dto.FinanceOfflineTradeEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.usercenter.model.dto.UcJpushCodeEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.configure.model.dto.UcRegionConfigureEntity
+    	</class>
+    	<class>
+    		com.idg.bfzb.server.configure.model.dto.TContMsgConfigureEntity
+    	</class>
+    	<class>com.idg.bfzb.server.project.model.dto.ProjectEntity</class>
+    	<properties>
+    		<property name="hibernate.dialect"
+    			value="org.hibernate.dialect.MySQL5Dialect" />
+    		<property name="hibernate.connection.driver_class"
+    			value="com.mysql.jdbc.Driver" />
+    		<!--配置数据库用户名 -->
+    		<property name="hibernate.connection.username" />
+    		<!--配置数据库密码 -->
+    		<property name="hibernate.connection.password" />
+    		<!--配置数据库url -->
+    		<property name="hibernate.connection.url"
+					  value="jdbc:mysql://121.43.37.173:3306/bfzb" />
+    			<!--value="jdbc:mysql://27.151.123.121:11023/bfzb" />-->
+    		<!--设置外连接抓取树的最大深度 -->
+    		<property name="hibernate.max_fetch_depth" value="3" />
+    		<!--自动输出schema创建DDL语句 -->
+    		<property name="hibernate.hbm2ddl.auto" value="update" />
+    		<property name="hibernate.show_sql" value="true" />
+    		<property name="hibernate.format_sql" value="true" />
+    		<property name="javax.persistence.validation.mode"
+    			value="none" />
+    	</properties>
+    </persistence-unit>
+
+</persistence>

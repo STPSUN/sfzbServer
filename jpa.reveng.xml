@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+	<table name="uc_auth_code" catalog="bfzb"
+		class="UcAuthCodeEntity">
+	</table>
+	<table name="t_attachment" catalog="bfzb"
+		class="AttachmentEntity">
+	</table>
+	<table name="uc_user_info" catalog="bfzb"
+		class="UcUserInfoEntity">
+		<column name="icon_attch_id"></column>
+		<column name="icon_url"></column>
+		<column name="icon_small_attach_id"></column>
+		<column name="icon_small_url"></column>
+	</table>
+	<table name="t_user_enterprise" catalog="bfzb"
+		class="UserEnterpriseEntity">
+	</table>
+	<table name="t_user_personal" catalog="bfzb"
+		class="UserPersonalEntity">
+	</table>
+	<table name="t_user_team" catalog="bfzb" class="UserTeamEntity"></table>
+	<table name="t_finance_trade_detail" catalog="bfzb"
+		class="FinanceTradeDetailEntity">
+	</table>
+	<table name="t_finance_withdraw_apply" catalog="bfzb"
+		class="FinanceWithdrawApplyEntity">
+	</table>
+	<table name="t_team_member" catalog="bfzb"
+		class="TeamMemberEntity">
+	</table>
+	<table name="t_team_apply" catalog="bfzb" class="TeamApplyEntity"></table>
+	<table name="t_category" catalog="bfzb" class="CategoryEntity"></table>
+	<table name="t_project" catalog="bfzb" class="ProjectEntity"></table>
+	<table name="t_sys_code" catalog="bfzb" class="SysCodeEntity"></table>
+	<table name="t_project_category" catalog="bfzb"
+		class="ProjectCategoryEntity">
+	</table>
+	<table name="t_cont_advertisement" catalog="bfzb"
+		class="ContAdvertisementEntity">
+	</table>
+	<table name="t_project_tender" catalog="bfzb"
+		class="ProjectTenderEntity">
+	</table>
+	<table name="t_evaluate_record" catalog="bfzb"
+		class="EvaluateRecordEntity">
+	</table>
+	<table name="t_project_reveal" catalog="bfzb"
+		class="ProjectRevealEntity">
+	</table>
+	<table name="t_project_progress" catalog="bfzb"
+		class="ProjectProgressEntity">
+	</table>
+	<table name="t_project_rejection" catalog="bfzb"
+		class="ProjectRejectionEntity">
+	</table>
+	<table name="t_project_warranty" catalog="bfzb"
+		class="ProjectWarrantyEntity">
+	</table>
+	<table name="t_project_ability" catalog="bfzb"
+		class="ProjectAbilityEntity">
+	</table>
+	<table name="t_category_ability" catalog="bfzb"
+		class="CategoryAbilityEntity">
+	</table>
+	<table name="t_cont_message" catalog="bfzb"
+		class="ConfMessageEntity">
+	</table>
+	<table name="t_cont_msg_detail" catalog="bfzb"
+		class="ConfMsgDetailEntity">
+	</table>
+	<table name="t_project_plan" catalog="bfzb"
+		class="ProjectPlanEntity">
+	</table>
+	<table name="uc_jpush_code" catalog="bfzb" class="UcJpushCodeEntity"></table>
+</hibernate-reverse-engineering>

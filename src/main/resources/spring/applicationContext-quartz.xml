@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<!-- 调用的类 -->
+	<bean id="projectQuartz" class="com.idg.bfzb.server.project.quartz.ProjectQuartz"></bean>
+	
+	<!-- 自动结算待验收中项目 -->
+	<bean id="autoPayInCheckProjectTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="projectQuartz"></property>
+		<property name="targetMethod" value="autoPayInCheckProject"></property>
+		<property name="concurrent" value="false"></property>
+	</bean>
+	<bean id="autoPayInCheckProjectTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="autoPayInCheckProjectTask"></property>
+		<property name="cronExpression">
+			<value>0 0/1 * * * ?</value>
+		</property>
+	</bean>
+	
+	<!-- 自动结算质保 -->
+	<bean id="autoPayWarrantyTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="projectQuartz"></property>
+		<property name="targetMethod" value="autoPayWarranty"></property>
+		<property name="concurrent" value="false"></property>
+	</bean>
+	<bean id="autoPayWarrantyTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="autoPayWarrantyTask"></property>
+		<property name="cronExpression">
+			<value>0 0/1 * * * ?</value>
+		</property>
+	</bean>
+	
+	<!-- 自动结算未处理的拒收 -->
+	<bean id="autoPayRejectionTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="projectQuartz"></property>
+		<property name="targetMethod" value="autoPayRejection"></property>
+		<property name="concurrent" value="false"></property>
+	</bean>
+	<bean id="autoPayRejectionTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="autoPayRejectionTask"></property>
+		<property name="cronExpression">
+			<value>0 0/1 * * * ?</value>
+		</property>
+	</bean>
+	
+	<!-- 处理已延期项目 -->
+	<bean id="doDelayProjectTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="projectQuartz"></property>
+		<property name="targetMethod" value="doDelayProject"></property>
+		<property name="concurrent" value="false"></property>
+	</bean>
+	<bean id="doDelayProjectTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="doDelayProjectTask"></property>
+		<property name="cronExpression">
+			<value>0 1 0 * * ?</value>
+		</property>
+	</bean>
+	
+	<!-- 启动定时器 -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="autoPayInCheckProjectTrigger"/>
+				<ref bean="autoPayWarrantyTrigger"/>
+				<ref bean="autoPayRejectionTrigger"/>
+				<ref bean="doDelayProjectTrigger"/>
+			</list>
+		</property>
+	</bean>
+</beans>

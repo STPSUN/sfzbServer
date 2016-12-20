@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+ 	<!-- 指明满足“/*”的页面，将被“/WEB-INF/decorator/decorator.jsp”所装饰 -->
+	<mapping path="/admin/*" decorator="/WEB-INF/pages/decorator/decorator.jsp"></mapping>
+</sitemesh>
